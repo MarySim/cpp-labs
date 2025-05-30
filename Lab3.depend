@@ -1,0 +1,101 @@
+# depslib dependency file v1.0
+1747281567 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\bird.cpp
+	"Bird.h"
+	<iostream>
+
+1747961974 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\bird.h
+	"Animal.h"
+
+1747961928 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\animal.h
+	<iostream>
+
+1747281585 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\circle.cpp
+	<cmath>
+	"Circle.h"
+	<iostream>
+	<stdexcept>
+
+1747962063 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\circle.h
+	"Figure.h"
+
+1747962257 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\figure.h
+	<iostream>
+
+1747281687 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\fish.cpp
+	"Fish.h"
+	<iostream>
+
+1747962451 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\fish.h
+	"Animal.h"
+
+1747281711 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\flyingbird.cpp
+	"FlyingBird.h"
+	<iostream>
+
+1747962513 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\flyingbird.h
+	"Bird.h"
+
+1747962571 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\human.cpp
+	"Human.h"
+	<iostream>
+
+1747962616 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\human.h
+	<string>
+
+1747980165 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\menu.cpp
+	"Menu.h"
+	<iostream>
+	<vector>
+	<cmath>
+	"Circle.h"
+	"Rectangle.h"
+	"Fish.h"
+	"Bird.h"
+	"FlyingBird.h"
+	"Student.h"
+	"Teacher.h"
+	"Summator.h"
+	"SquareSummator.h"
+	"CubeSummator.h"
+
+1747962727 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\menu.h
+	<string>
+	<vector>
+	<functional>
+
+1747972802 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\rectangle.h
+	"Figure.h"
+
+1747978485 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\student.h
+	"Human.h"
+	<vector>
+
+1747978694 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\teacher.h
+	"Human.h"
+	<vector>
+	<string>
+
+1747978533 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\summator.h
+
+1747972957 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\squaresummator.h
+	"Summator.h"
+
+1747962133 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\cubesummator.h
+	"Summator.h"
+
+1747971677 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\rectangle.cpp
+	"Rectangle.h"
+	<iostream>
+
+1747978418 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\student.cpp
+	"Student.h"
+	<numeric>
+
+1747978597 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\teacher.cpp
+	"Teacher.h"
+	<iostream>
+
+1747978859 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab3\main.cpp
+	<iostream>
+	"Menu.h"
+
