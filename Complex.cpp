@@ -1,86 +1,104 @@
 #include "Complex.h"
+#include <cmath>
+#include <limits>
+#include <stdexcept>
 
-Complex::Complex() {
-    re = new double(0);
-    im = new double(0);
+Complex::Complex() : re(0), im(0) {}
+Complex::Complex(double x, double y) : re(x), im(y) {}
+Complex::Complex(const Complex& other) : re(other.re), im(other.im) {}
+
+Complex& Complex::operator=(const Complex& other) {
+    if (this != &other) {
+        re = other.re;
+        im = other.im;
+    }
+    return *this;
 }
 
-Complex::Complex(double x, double y) {
-    this->re = new double(x);
-    this->im = new double(y);
+Complex Complex::operator+(const Complex& other) const {
+    return Complex(re + other.re, im + other.im);
 }
 
-Complex::~Complex() {
-    delete re;
-    delete im;
+Complex Complex::operator-(const Complex& other) const {
+    return Complex(re - other.re, im - other.im);
 }
 
-// Установка действительной части
-void Complex::SetRe(double x) {
-    *re = x;
+Complex Complex::operator*(const Complex& other) const {
+    return Complex(re * other.re - im * other.im,
+        re * other.im + im * other.re);
 }
 
-// Установка мнимой части
-void Complex::SetIm(double y) {
-    *im = y;
+Complex Complex::operator/(const Complex& other) const {
+    double denom = other.re * other.re + other.im * other.im;
+    if (denom == 0) throw std::runtime_error("Division by zero");
+    return Complex((re * other.re + im * other.im) / denom,
+        (im * other.re - re * other.im) / denom);
 }
 
-// Получение действительной части
-double Complex::GetRe() const {
-    return *re;
+Complex& Complex::operator++() {
+    ++re; ++im;
+    return *this;
 }
 
-// Получение мнимой части
-double Complex::GetIm() const {
-    return *im;
+Complex Complex::operator++(int) {
+    Complex temp(*this);
+    ++(*this);
+    return temp;
 }
 
-// Вычисление модуля комплексного числа
-double Complex::Abs() const {
-    return std::sqrt((*re) * (*re) + (*im) * (*im));    // Формула: sqrt(re^2 + im^2)
+Complex& Complex::operator--() {
+    --re; --im;
+    return *this;
 }
 
-// Вычисление аргумента комплексного числа
-double Complex::Arg() const {
-    return std::atan2(*im, *re);    // Формула: atan2(im, re)
+Complex Complex::operator--(int) {
+    Complex temp(*this);
+    --(*this);
+    return temp;
 }
 
-// Вывод числа в алгебраической форме
-void Complex::Print() const {
-    std::cout << *re << " + i*" << *im << std::endl;    // Формат: a + bi
+bool Complex::operator>(const Complex& other) const {
+    return modulus() > other.modulus();
 }
 
-// Вывод числа в тригонометрической форме
-void Complex::TrigPrint() const {
-    double rho = Abs();
-    double phi = Arg();
-    std::cout << rho << " * (cos(" << phi << ") + i*sin(" << phi << "))" << std::endl;  // Формат: r * (cos(phi) + i*sin(phi))
+bool Complex::operator<(const Complex& other) const {
+    return modulus() < other.modulus();
 }
 
-// Вывод числа в экспоненциальной форме
-void Complex::ExpPrint() const {
-    double rho = Abs();
-    double phi = Arg();
-    std::cout << rho << " * e^(i*" << phi << ")" << std::endl;  // Формат: r * e^(i*phi)
+bool Complex::operator==(const Complex& other) const {
+    return re == other.re && im == other.im;
 }
 
-// Сложение двух комплексных чисел
-Complex Complex::Add(const Complex& z) const {
-    return Complex(*re + *z.re, *im + *z.im);   // Формула: (a + bi) + (c + di) = (a + c) + (b + d)i
+bool Complex::operator!=(const Complex& other) const {
+    return !(*this == other);
 }
 
-// Вычитание комплексных чисел
-Complex Complex::Sub(const Complex& z) const {
-    return Complex(*re - *z.re, *im - *z.im);   // Формула: (a + bi) - (c + di) = (a - c) + (b - d)i
+std::ostream& operator<<(std::ostream& os, const Complex& c) {
+    os << c.re;
+    if (c.im >= 0) os << " + " << c.im << "i";
+    else os << " - " << -c.im << "i";
+    return os;
 }
 
-// Умножение комплексных чисел
-Complex Complex::Mult(const Complex& z) const {
-    return Complex(*re * *z.re - *im * *z.im, *re * *z.im + *im * *z.re);   // Формула: (a + bi) * (c + di) = (a*c - b*d) + (a*d + b*c)i
+std::istream& operator>>(std::istream& is, Complex& c) {
+    std::cout << "Real part: ";
+    while (!(is >> c.re)) {
+        is.clear();
+        is.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Invalid input. Enter real part again: ";
+    }
+
+    std::cout << "Imaginary part: ";
+    while (!(is >> c.im)) {
+        is.clear();
+        is.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Invalid input. Enter imaginary part again: ";
+    }
+
+    is.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    return is;
 }
 
-// Деление комплексных чисел
-Complex Complex::Div(const Complex& z) const {
-    double denominator = *z.re * *z.re + *z.im * *z.im; // Знаменатель: c^2 + d^2
-    return Complex((*re * *z.re + *im * *z.im) / denominator, (*im * *z.re - *re * *z.im) / denominator);   // Формула: (a + bi) / (c + di) = [(a*c + b*d) + (b*c - a*d)i] / (c^2 + d^2)
+double Complex::modulus() const {
+    return sqrt(re * re + im * im);
 }
