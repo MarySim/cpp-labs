@@ -1,0 +1,73 @@
+# depslib dependency file v1.0
+1749133245 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\basecharacter.cpp
+	"BaseCharacter.h"
+
+1749133252 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\basecharacter.h
+
+1749133258 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\baseenemy.cpp
+	"BaseEnemy.h"
+
+1749133263 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\baseenemy.h
+	"BaseCharacter.h"
+	"Weapon.h"
+	<iostream>
+
+1749133351 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\weapon.h
+	<string>
+	<iostream>
+	"BaseCharacter.h"
+
+1749133581 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\main.cpp
+	<iostream>
+	"Menu.h"
+
+1749133313 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\menu.h
+
+1749133296 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\mainhero.cpp
+	"MainHero.h"
+	"GameExceptions.h"
+	<iostream>
+
+1749133302 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\mainhero.h
+	"BaseCharacter.h"
+	"Weapon.h"
+	<vector>
+	<string>
+
+1749133289 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\gameexceptions.h
+	<stdexcept>
+
+1749133307 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\menu.cpp
+	"Menu.h"
+	"Password.h"
+	"MainHero.h"
+	"BaseEnemy.h"
+	"Weapon.h"
+	"ExtraPasswordExceptions.h"
+	"GameExceptions.h"
+	<iostream>
+
+1749133324 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\password.h
+	<string>
+	"PasswordExceptions.h"
+
+1749133341 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\passwordexceptions.h
+	<stdexcept>
+
+1749133285 c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\extrapasswordexceptions.h
+	<stdexcept>
+
+1749133319 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\password.cpp
+	"Password.h"
+	<iostream>
+	<cctype>
+	<set>
+	"ExtraPasswordExceptions.h"
+
+1749133334 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\passwordexceptions.cpp
+	"PasswordExceptions.h"
+
+1749133347 source:c:\users\marin\onedrive\Рабочий стол\Всё со стола\КемГУ\Лабораторки\Программирование\2 семестр\lab6\weapon.cpp
+	"Weapon.h"
+	<cmath>
+

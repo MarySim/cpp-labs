@@ -33,12 +33,22 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Complex.cpp" />
-		<Unit filename="Complex.h" />
+		<Unit filename="BaseCharacter.cpp" />
+		<Unit filename="BaseCharacter.h" />
+		<Unit filename="BaseEnemy.cpp" />
+		<Unit filename="BaseEnemy.h" />
+		<Unit filename="ExtraPasswordExceptions.h" />
+		<Unit filename="GameExceptions.h" />
+		<Unit filename="MainHero.cpp" />
+		<Unit filename="MainHero.h" />
 		<Unit filename="Menu.cpp" />
 		<Unit filename="Menu.h" />
-		<Unit filename="Rational.cpp" />
-		<Unit filename="Rational.h" />
+		<Unit filename="Password.cpp" />
+		<Unit filename="Password.h" />
+		<Unit filename="PasswordExceptions.cpp" />
+		<Unit filename="PasswordExceptions.h" />
+		<Unit filename="Weapon.cpp" />
+		<Unit filename="Weapon.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
